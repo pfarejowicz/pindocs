@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Box, Column } from 'gestalt';
-import Navigation from './components/Navigation';
-import Main from './components/Main';
+import Navigation from './Navigation';
+import Main from './Main';
 import 'gestalt/dist/gestalt.css';
 
 function App() {

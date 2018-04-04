@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { Heading } from 'gestalt';
+import { Box, Text } from 'gestalt';
 
 type Props = {|
   caption?: string,
@@ -9,7 +9,16 @@ type Props = {|
 |};
 
 function ImageCard({ caption, image }: Props) {
-  return <Heading size={image}>{caption}</Heading>;
+  return (
+    <Box>
+      <img alt="" style={{ width: '100%' }} src={image} />
+      {caption && (
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <Text align="center">{caption}</Text>
+        </Box>
+      )}
+    </Box>
+  );
 }
 
 export default ImageCard;
