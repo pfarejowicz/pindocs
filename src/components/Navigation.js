@@ -13,15 +13,15 @@ type Props = {|
 const pages = Object.keys(routes);
 const options = [{ label: '-', value: '/' }].concat(
   pages.map(page => ({
-    label: page,
-    value: `/${page}`,
+    label: routes[page].name,
+    value: `/${routes[page].path}`,
   }))
 );
 
 function Navigation({ history, location }: Props) {
   const links = pages.map(page => (
     <Text bold leading="tall" color="darkGray" size="lg">
-      <Link to={`/${page}`}>{page}</Link>
+      <Link to={`/${routes[page].path}`}>{routes[page].name}</Link>
     </Text>
   ));
 
