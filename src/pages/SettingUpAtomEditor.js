@@ -146,8 +146,8 @@ export default {
       type: 'text',
       text: `
         Lastly, in order to make Prettier work with our ESLint setup from before we need to enable one
-        feature in the options menu. Once the installation completes, click the Settings button and scroll
-        down to find the option labeled “ESLint Integration”. Check the box to enable this option.`,
+        feature in the options menu. Once the installation completes, click the **Settings** button and
+        scroll down to find the option labeled “ESLint Integration”. Check the box to enable this option.`,
     },
     {
       type: 'text',
