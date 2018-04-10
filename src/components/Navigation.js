@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react';
-import { Text, Box, SelectList, Icon, Heading } from 'gestalt';
-import { Link, withRouter } from 'react-router-dom';
+import { Text, Box, Link, SelectList, Icon, Heading } from 'gestalt';
+import { withRouter } from 'react-router-dom';
 import routes from '../routes';
 
 type Props = {|
@@ -18,12 +18,27 @@ const options = [{ label: '-', value: '/' }].concat(
   }))
 );
 
+const isLeftClickEvent = event => event.button === 0;
+const isModifiedEvent = event =>
+  !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+
 function Navigation({ history, location }: Props) {
-  const links = pages.map(page => (
-    <Text bold leading="tall" color="darkGray" size="lg">
-      <Link to={`/${routes[page].path}`}>{routes[page].name}</Link>
-    </Text>
-  ));
+  const links = pages.map(page => {
+    const href = `/${routes[page].path}`;
+    const handleClick = ({ event }) => {
+        if (event.defaultPrevented) return;
+        if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
+        event.preventDefault();
+        history.push(href);
+      };
+    return (
+      <Text bold leading="tall" color="darkGray" size="lg">
+        <Link href={href} onClick={handleClick}>
+          {routes[page].name}
+        </Link>
+      </Text>
+    );
+  });
 
   return (
     <Box>

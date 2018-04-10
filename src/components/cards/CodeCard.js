@@ -3,6 +3,7 @@
 import React from 'react';
 import { Text } from 'gestalt';
 import highlightjs from 'highlight.js';
+import 'highlight.js/styles/atom-one-dark.css';
 
 type Props = {|
   code: string,

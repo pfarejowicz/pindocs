@@ -15,7 +15,7 @@ function TitleCard({ description, title }: Props) {
         <Heading size="lg">{title}</Heading>
       </Box>
       <Box marginBottom={4}>
-        <Text>{description}</Text>
+        <Text leading="tall">{description}</Text>
       </Box>
       <Divider />
     </Box>
