@@ -10,11 +10,11 @@ type Props = {|
   location: *,
 |};
 
-const pages = Object.keys(routes);
+const pages = Object.keys(routes).map(route => routes[route]);
 const options = [{ label: '-', value: '/' }].concat(
   pages.map(page => ({
-    label: routes[page].name,
-    value: `/${routes[page].path}`,
+    label: page.name,
+    value: `/${page.path}`,
   }))
 );
 
@@ -24,7 +24,7 @@ const isModifiedEvent = event =>
 
 function Navigation({ history, location }: Props) {
   const links = pages.map(page => {
-    const href = `/${routes[page].path}`;
+    const href = `/${page.path}`;
     const handleClick = ({ event }) => {
       if (event.defaultPrevented) return;
       if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
@@ -34,7 +34,7 @@ function Navigation({ history, location }: Props) {
     return (
       <Text bold leading="tall" color="darkGray" size="lg">
         <Link href={href} onClick={handleClick}>
-          {routes[page].name}
+          {page.name}
         </Link>
       </Text>
     );

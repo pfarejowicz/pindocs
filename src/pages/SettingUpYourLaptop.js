@@ -1,6 +1,8 @@
 // @flow
 
-export default {
+import type { Page } from '../lib/types';
+
+const page: Page = {
   name: 'Setting Up Your Laptop',
   path: 'settingupyourlaptop',
   cards: [
@@ -30,3 +32,5 @@ export default {
     },
   ],
 };
+
+export default page;

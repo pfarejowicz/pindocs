@@ -7,8 +7,9 @@ import ImageCard from '../components/cards/ImageCard';
 import TextCard from '../components/cards/TextCard';
 import TitleCard from '../components/cards/TitleCard';
 import Page from '../components/Page';
+import type { Page as PageType } from './types';
 
-export const createCodeCard = (code: string, language?: 'javascript') => (
+export const createCodeCard = (code: string, language?: string) => (
   <CodeCard code={code} language={language || 'javascript'} />
 );
 
@@ -26,7 +27,7 @@ export const createTitleCard = (title: string, description: string) => (
   <TitleCard title={title} description={description} />
 );
 
-export const createPage = (page: *) => () => {
+export const createPage = (page: PageType) => () => {
   const cards = page.cards.map(card => {
     switch (card.type) {
       case 'code':

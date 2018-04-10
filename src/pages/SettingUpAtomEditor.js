@@ -1,6 +1,8 @@
 // @flow
 
-export default {
+import type { Page } from '../lib/types';
+
+const page: Page = {
   name: 'Setting Up Atom Editor',
   path: 'atom',
   cards: [
@@ -157,3 +159,5 @@ export default {
     },
   ],
 };
+
+export default page;
