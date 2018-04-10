@@ -26,11 +26,11 @@ function Navigation({ history, location }: Props) {
   const links = pages.map(page => {
     const href = `/${routes[page].path}`;
     const handleClick = ({ event }) => {
-        if (event.defaultPrevented) return;
-        if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
-        event.preventDefault();
-        history.push(href);
-      };
+      if (event.defaultPrevented) return;
+      if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
+      event.preventDefault();
+      history.push(href);
+    };
     return (
       <Text bold leading="tall" color="darkGray" size="lg">
         <Link href={href} onClick={handleClick}>

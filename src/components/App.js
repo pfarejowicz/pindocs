@@ -8,7 +8,7 @@ import 'gestalt/dist/gestalt.css';
 
 function App() {
   return (
-    <Box mdDisplay="flex" direction="row" minHeight="100vh">
+    <Box mdDisplay="flex" direction="row" height="100vh">
       <Column span={12} mdSpan={3}>
         <Box padding={4}>
           <Navigation />
