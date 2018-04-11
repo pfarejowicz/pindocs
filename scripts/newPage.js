@@ -3,7 +3,7 @@
 const path = require('path');
 const shell = require('shelljs');
 
-const template = shell.ShellString(`
+const template = `
 // @flow
 
 import type { Page } from '../lib/types';
@@ -22,7 +22,7 @@ const page: Page = {
 };
 
 export default page;
-`);
+`;
 
 if (!process.argv[2]) {
   console.log(
@@ -31,5 +31,5 @@ if (!process.argv[2]) {
 } else {
   console.log(`Setting up new file: ${process.argv[2]}`);
   shell.cd(path.join(__dirname, '..', 'src', 'pages'));
-  template.to(`${process.argv[2]}`);
+  shell.ShellString(template.trim()).to(`${process.argv[2]}`);
 }

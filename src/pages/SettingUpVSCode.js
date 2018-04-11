@@ -13,7 +13,7 @@ const page: Page = {
   cards: [
     {
       type: 'title',
-      title: 'Setting Up VSCode Editor',
+      title: 'Setting Up VSCode',
       description: `
         A powerful editor increases developer velocity and works well with the technologies and frameworks
         that we use in our codebase. Pinterest gives you the freedom to work in any IDE so this guide is
