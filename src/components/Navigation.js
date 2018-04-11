@@ -68,7 +68,7 @@ function Navigation({ history, location }: Props) {
             />
           </Box>
           <Box paddingX={1}>
-            <Heading size="xs">Docs</Heading>
+            <Heading size="xs">Web Docs</Heading>
           </Box>
         </Box>
         <Box role="list">

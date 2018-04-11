@@ -15,7 +15,7 @@ const page: Page = {
     {
       type: 'title',
       title: '<PAGE TITLE>',
-      description: '<PAGE DESCRIPTION',
+      description: '<PAGE DESCRIPTION>',
     },
     // Add more cards to the list here
   ],
