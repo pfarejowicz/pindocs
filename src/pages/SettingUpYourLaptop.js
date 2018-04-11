@@ -4,7 +4,7 @@ import type { Page } from '../lib/types';
 
 const page: Page = {
   name: 'Setting Up Your Laptop',
-  path: 'settingupyourlaptop',
+  path: 'gettingstarted',
   cards: [
     {
       type: 'title',
