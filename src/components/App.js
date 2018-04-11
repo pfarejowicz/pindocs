@@ -9,7 +9,7 @@ import 'gestalt/dist/gestalt.css';
 function App() {
   return (
     <Box mdDisplay="flex" direction="row" height="100vh">
-      <Box column={12} mdColumn={3}>
+      <Box column={12} mdColumn={3} overflow="auto">
         <Box padding={4}>
           <Navigation />
         </Box>

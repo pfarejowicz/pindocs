@@ -1,9 +1,17 @@
 // @flow
 
 import type { Page } from '../lib/types';
+import image1 from '../images/atom_1.png';
+import image2 from '../images/atom_2.png';
+import image3 from '../images/atom_3.png';
+import image4 from '../images/atom_4.png';
+import image5 from '../images/atom_5.png';
+import image6 from '../images/atom_6.png';
+import image7 from '../images/atom_7.png';
+import image8 from '../images/atom_8.png';
 
 const page: Page = {
-  name: 'Setting Up Atom Editor',
+  name: 'Setting Up Atom',
   path: 'atom',
   cards: [
     {
@@ -24,6 +32,12 @@ const page: Page = {
       text: `
         [Atom](https://atom.io/) is an incredible open source text editor created by the GiHub community
         with tremendous support for all of the plugins and features we use.`,
+    },
+    {
+      type: 'image',
+      image: image1,
+      caption:
+        'An Atom editor window open with all features in this tutorial enabled',
     },
     {
       type: 'text',
@@ -65,6 +79,11 @@ const page: Page = {
         5. Click the **Install** button.`,
     },
     {
+      type: 'image',
+      image: image2,
+      caption: 'The nuclide package we will be installing',
+    },
+    {
       type: 'text',
       text: `
         Once the installation completes, click the Settings button and scroll down to find the section
@@ -72,11 +91,21 @@ const page: Page = {
         of the recommended packages we will need. Check the box to enable this option.`,
     },
     {
+      type: 'image',
+      image: image3,
+      caption: 'Select this option from the Nuclide settings menu',
+    },
+    {
       type: 'text',
       text: `
         Continue scrolling down the page to find the next option we will need to enable under the
         “Nuclide-flow” heading. At Pinterest we include Flow as part of our development dependencies,
         which we need to tell Nuclide about. Check the box to enable using our Flow binary.`,
+    },
+    {
+      type: 'image',
+      image: image4,
+      caption: 'Select this option from the Nuclide-flow settings menu',
     },
     {
       type: 'text',
@@ -111,12 +140,22 @@ const page: Page = {
         5. Click the **Install** button.`,
     },
     {
+      type: 'image',
+      image: image5,
+      caption: 'The linter-eslint package we will be installing',
+    },
+    {
       type: 'text',
       text: `
         Note: If Atom asks you to install another package named “linter” in a prompt like the one
         below, do not install it, just decline by clicking on the Never button to dismiss the error.
         We will be using the default features of Nuclide which conflict with the current version of
         this package.`,
+    },
+    {
+      type: 'image',
+      image: image6,
+      caption: 'Decline the installation by selecting Never',
     },
     {
       type: 'heading',
@@ -145,11 +184,21 @@ const page: Page = {
         5. Click the **Install** button.`,
     },
     {
+      type: 'image',
+      image: image7,
+      caption: 'The prettier-atom package we will be installing',
+    },
+    {
       type: 'text',
       text: `
         Lastly, in order to make Prettier work with our ESLint setup from before we need to enable one
         feature in the options menu. Once the installation completes, click the **Settings** button and
         scroll down to find the option labeled “ESLint Integration”. Check the box to enable this option.`,
+    },
+    {
+      type: 'image',
+      image: image8,
+      caption: 'Select this option from the Prettier settings menu',
     },
     {
       type: 'text',

@@ -14,7 +14,9 @@ function ImageCard({ caption, image }: Props) {
       <img alt="" style={{ width: '100%' }} src={image} />
       {caption && (
         <Box display="flex" alignItems="center" justifyContent="center">
-          <Text align="center">{caption}</Text>
+          <Text align="center" color="gray" italic>
+            {caption}
+          </Text>
         </Box>
       )}
     </Box>

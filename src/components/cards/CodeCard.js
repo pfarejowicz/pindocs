@@ -3,6 +3,7 @@
 import React from 'react';
 import { Text } from 'gestalt';
 import highlightjs from 'highlight.js';
+import stripIndent from '../../lib/strip';
 import 'highlight.js/styles/atom-one-dark.css';
 
 type Props = {|
@@ -11,7 +12,7 @@ type Props = {|
 |};
 
 function CodeCard({ code, language }: Props) {
-  const highlight = highlightjs.highlight(language, code).value;
+  const highlight = highlightjs.highlight(language, stripIndent(code)).value;
   const html = `<pre><code class="hljs ${language}">${highlight}</code></pre>`;
 
   return (
